@@ -1,0 +1,67 @@
+[
+  {
+    "user": "@nathanf",
+    "statistics": [
+      {
+        "platform": "facebook",
+        "followers": {
+          "total": 1987,
+          "today": 12
+        },
+        "interaction": {
+          "today": 87,
+          "lastDay": 84
+        },
+        "likes": {
+          "today": 52,
+          "lastDay": 53
+        }
+      },
+      {
+        "platform": "twitter",
+        "followers": {
+          "total": 1044,
+          "today": 99
+        },
+        "interaction": {
+          "today": 117,
+          "lastDay": 29
+        },
+        "likes": {
+          "today": 507,
+          "lastDay": 78
+        }
+      },
+      {
+        "platform": "instagram",
+        "followers": {
+          "total": 11734,
+          "today": 1099
+        },
+        "interaction": {
+          "today": 52009,
+          "lastDay": 3526
+        },
+        "likes": {
+          "today": 5462,
+          "lastDay": 232
+        }
+      },
+      {
+        "platform": "youtube",
+        "followers": {
+          "total": 8239,
+          "today": -144
+        },
+        "interaction": {
+          "today": 1407,
+          "lastDay": 1598
+        },
+        "likes": {
+          "today": 107,
+          "lastDay": 132
+        }
+      }
+    ]
+  }
+]
