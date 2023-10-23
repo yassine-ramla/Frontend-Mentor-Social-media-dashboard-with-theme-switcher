@@ -1,9 +1,12 @@
 {
   "name": "frontend-mentor-social-media-dashboard-with-theme-switcher",
+  "homepage": "https://yassine-ramla.github.io/frontend-mentor-social-media-dashboard-with-theme-switcher",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "test": "vitest",
     "build": "vite build",
