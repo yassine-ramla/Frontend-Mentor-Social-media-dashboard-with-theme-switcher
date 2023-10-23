@@ -21,7 +21,7 @@ export default function SocialMediaCard({
     >
       <div className="flex gap-x-2 justify-center items-center">
         <img
-          src={`./src/assets/images/icon-${platform}.svg`}
+          src={`../src/assets/images/icon-${platform}.svg`}
           alt={`${platform} logo`}
         />
         <p

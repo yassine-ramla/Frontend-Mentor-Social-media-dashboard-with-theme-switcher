@@ -25,7 +25,7 @@ export default function OverviewCard({
           {header}
         </h2>
         <img
-          src={`./src/assets/images/icon-${icon}.svg`}
+          src={`../src/assets/images/icon-${icon}.svg`}
           alt={`${icon} icon`}
         />
       </div>
