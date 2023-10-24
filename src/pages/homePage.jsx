@@ -8,8 +8,9 @@ import calculateTotalFollowers from "../utils/calculateTotalFollowers";
 import CalculatePercentage from "../utils/calculatePercentage";
 
 export default function HomePage() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(localStorage.darkTheme === "false" ? false : true);
   const toggleModeState = () => {
+    localStorage.setItem("darkTheme", !dark);
     setDark(!dark);
   };
   const user = data[0].user;
@@ -42,7 +43,11 @@ export default function HomePage() {
           );
         })}
       </div>
-      <h2 className={`w-full max-w-5xl xl:max-w-6xl text-2xl xl:text-[26px] ${dark ? "text-white" : "text-myDarkGrayishBlueText"} font-bold pt-2 xl:pt-6 pb-6`}>
+      <h2
+        className={`w-full max-w-5xl xl:max-w-6xl text-2xl xl:text-[26px] ${
+          dark ? "text-white" : "text-myDarkGrayishBlueText"
+        } font-bold pt-2 xl:pt-6 pb-6`}
+      >
         Overview - Today
       </h2>
       <div className="w-full max-w-5xl xl:max-w-6xl flex flex-col xl:grid xl:grid-rows-2 xl:grid-cols-2 xl:gap-x-6 justify-center items-center gap-y-5">
@@ -61,7 +66,10 @@ export default function HomePage() {
           const lastday1 = element.interaction.lastDay;
           const lastday2 = element.likes.lastDay;
           return (
-            <div className="w-full flex flex-col xl:flex-row xl:gap-x-6 gap-y-5" key={index}>
+            <div
+              className="w-full flex flex-col xl:flex-row xl:gap-x-6 gap-y-5"
+              key={index}
+            >
               <OverviewCard
                 icon={icon}
                 header={header1}
