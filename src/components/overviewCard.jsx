@@ -1,4 +1,5 @@
 import FormatFollowersNumber from "../utils/formatFollowersNumber";
+import socialMediaImg from "../assets/images/icon-facebook.svg"
 
 export default function OverviewCard({
   header = "Likes",
@@ -25,7 +26,7 @@ export default function OverviewCard({
           {header}
         </h2>
         <img
-          src={`../assets/images/icon-${icon}.svg`}
+          src={socialMediaImg}
           alt={`${icon} icon`}
         />
       </div>
