@@ -68,8 +68,8 @@ export default function SocialMediaCard({
         <img
           src={
             difference > 0
-              ? "./src/assets/images/icon-up.svg"
-              : "./src/assets/images/icon-down.svg"
+              ? upIcon
+              : downIcon
           }
           alt="up icon"
         />
