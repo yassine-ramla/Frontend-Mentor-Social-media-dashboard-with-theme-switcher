@@ -22,7 +22,7 @@ export default function OverviewCard({
   //     : icon === "twitter"
   //     ? twitterIcon
   //     : youtubeIcon;
-  const basePath = import.meta.env.PROD ? "/assets/" : "/";
+  // const basePath = import.meta.env.PROD ? "/assets/" : "/";
   
   return (
     <article
@@ -41,7 +41,7 @@ export default function OverviewCard({
           {header}
         </h2>
         <img
-          src={`${basePath}icon-${icon}.svg`}
+          src={`/frontend-mentor-social-media-dashboard-with-theme-switcher/assets/icon-${icon}.svg`}
           alt={`${icon} icon`}
         />
       </div>
