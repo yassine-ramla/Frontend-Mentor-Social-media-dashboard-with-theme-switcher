@@ -3,8 +3,8 @@ import FormatFollowersNumber from "../utils/formatFollowersNumber";
 // import instagramIcon from "../assets/images/icon-instagram.svg";
 // import twitterIcon from "../assets/images/icon-twitter.svg";
 // import youtubeIcon from "../assets/images/icon-youtube.svg";
-// import upIcon from "../assets/images/icon-up.svg";
-// import downIcon from "../assets/images/icon-down.svg";
+import upIcon from "../assets/images/icon-up.svg";
+import downIcon from "../assets/images/icon-down.svg";
 
 export default function OverviewCard({
   header = "Likes",
@@ -40,7 +40,7 @@ export default function OverviewCard({
           {header}
         </h2>
         <img
-          src={`${process.env.PUBLIC_URL}/assets/images/icon-${platform}.svg`}
+          src={`${process.env.PUBLIC_URL}/assets/images/icon-${icon}.svg`}
           alt={`${icon} icon`}
         />
       </div>
