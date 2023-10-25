@@ -22,7 +22,9 @@ export default function OverviewCard({
   //     : icon === "twitter"
   //     ? twitterIcon
   //     : youtubeIcon;
-
+  const basePath = import.meta.env.PROD ? "/assets/" : "/";
+  const iconSrc = `${basePath}icon-${platform}.svg`;
+  
   return (
     <article
       className={`w-full flex flex-col gap-y-4 p-6 rounded-md ${
@@ -40,7 +42,7 @@ export default function OverviewCard({
           {header}
         </h2>
         <img
-          src={`${process.env.PUBLIC_URL}/assets/images/icon-${icon}.svg`}
+          src={`${basePath}icon-${platform}.svg`}
           alt={`${icon} icon`}
         />
       </div>
@@ -54,11 +56,7 @@ export default function OverviewCard({
         </p>
         <div className="flex justify-center items-center gap-x-1">
           <img
-            src={
-              percentage > 0
-                ? upIcon
-                : downIcon
-            }
+            src={percentage > 0 ? upIcon : downIcon}
             alt={percentage > 0 ? "up icon" : "down icon"}
           />
           <p
