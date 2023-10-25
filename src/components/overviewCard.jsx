@@ -1,10 +1,10 @@
 import FormatFollowersNumber from "../utils/formatFollowersNumber";
-import facebookIcon from "../assets/images/icon-facebook.svg";
-import instagramIcon from "../assets/images/icon-instagram.svg";
-import twitterIcon from "../assets/images/icon-twitter.svg";
-import youtubeIcon from "../assets/images/icon-youtube.svg";
-import upIcon from "../assets/images/icon-up.svg";
-import downIcon from "../assets/images/icon-down.svg";
+// import facebookIcon from "../assets/images/icon-facebook.svg";
+// import instagramIcon from "../assets/images/icon-instagram.svg";
+// import twitterIcon from "../assets/images/icon-twitter.svg";
+// import youtubeIcon from "../assets/images/icon-youtube.svg";
+// import upIcon from "../assets/images/icon-up.svg";
+// import downIcon from "../assets/images/icon-down.svg";
 
 export default function OverviewCard({
   header = "Likes",
@@ -14,14 +14,14 @@ export default function OverviewCard({
   up = true,
   dark = false,
 }) {
-  const iconSource =
-    icon === "facebook"
-      ? facebookIcon
-      : icon === "instagram"
-      ? instagramIcon
-      : icon === "twitter"
-      ? twitterIcon
-      : youtubeIcon;
+  // const iconSource =
+  //   icon === "facebook"
+  //     ? facebookIcon
+  //     : icon === "instagram"
+  //     ? instagramIcon
+  //     : icon === "twitter"
+  //     ? twitterIcon
+  //     : youtubeIcon;
 
   return (
     <article
@@ -40,7 +40,7 @@ export default function OverviewCard({
           {header}
         </h2>
         <img
-          src={iconSource}
+          src={`${process.env.PUBLIC_URL}/assets/images/icon-${platform}.svg`}
           alt={`${icon} icon`}
         />
       </div>
