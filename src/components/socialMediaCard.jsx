@@ -1,10 +1,4 @@
 import FormatFollowersNumber from "../utils/formatFollowersNumber";
-import facebookIcon from "../assets/images/icon-facebook.svg";
-import instagramIcon from "../assets/images/icon-instagram.svg";
-import twitterIcon from "../assets/images/icon-twitter.svg";
-import youtubeIcon from "../assets/images/icon-youtube.svg";
-import upIcon from "../assets/images/icon-up.svg";
-import downIcon from "../assets/images/icon-down.svg";
 
 export default function SocialMediaCard({
   platform,
@@ -13,15 +7,6 @@ export default function SocialMediaCard({
   difference = 0,
   dark = false,
 }) {
-  const iconSource =
-    platform === "facebook"
-      ? facebookIcon
-      : platform === "instagram"
-      ? instagramIcon
-      : platform === "twitter"
-      ? twitterIcon
-      : youtubeIcon;
-
   return (
     <article
       className={`w-full ${
@@ -39,7 +24,7 @@ export default function SocialMediaCard({
       } before:top-0 duration-200`}
     >
       <div className="flex gap-x-2 justify-center items-center">
-        <img src={iconSource} alt={`${platform} logo`} />
+        <img src={`/frontend-mentor-social-media-dashboard-with-theme-switcher/assets/icon-${platform}.svg`} alt={`${platform} logo`} />
         <p
           className={`${
             dark ? "text-myDesaturatedBlueText" : "text-myDarkGrayishBlueText"
@@ -66,11 +51,7 @@ export default function SocialMediaCard({
       </div>
       <div className="flex justify-center items-center gap-x-1">
         <img
-          src={
-            difference > 0
-              ? upIcon
-              : downIcon
-          }
+          src={`/frontend-mentor-social-media-dashboard-with-theme-switcher/assets/icon-${difference > 0 ? "up" : "down"}.svg`}
           alt="up icon"
         />
         <p

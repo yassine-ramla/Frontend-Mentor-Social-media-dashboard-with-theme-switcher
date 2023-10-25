@@ -1,29 +1,12 @@
 import FormatFollowersNumber from "../utils/formatFollowersNumber";
-// import facebookIcon from "../assets/images/icon-facebook.svg";
-// import instagramIcon from "../assets/images/icon-instagram.svg";
-// import twitterIcon from "../assets/images/icon-twitter.svg";
-// import youtubeIcon from "../assets/images/icon-youtube.svg";
-import upIcon from "../assets/images/icon-up.svg";
-import downIcon from "../assets/images/icon-down.svg";
 
 export default function OverviewCard({
   header = "Likes",
   icon,
   number = 0,
   percentage = 0,
-  up = true,
   dark = false,
 }) {
-  // const iconSource =
-  //   icon === "facebook"
-  //     ? facebookIcon
-  //     : icon === "instagram"
-  //     ? instagramIcon
-  //     : icon === "twitter"
-  //     ? twitterIcon
-  //     : youtubeIcon;
-  // const basePath = import.meta.env.PROD ? "/assets/" : "/";
-  
   return (
     <article
       className={`w-full flex flex-col gap-y-4 p-6 rounded-md ${
@@ -55,7 +38,7 @@ export default function OverviewCard({
         </p>
         <div className="flex justify-center items-center gap-x-1">
           <img
-            src={percentage > 0 ? upIcon : downIcon}
+            src={`/frontend-mentor-social-media-dashboard-with-theme-switcher/assets/icon-${percentage > 0 ? "up" : "down"}.svg`}
             alt={percentage > 0 ? "up icon" : "down icon"}
           />
           <p
